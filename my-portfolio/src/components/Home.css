@@ -111,10 +111,14 @@ p {
   background-color: #F76C6C;
   color: #fff;
   padding: 10px 30px;
-  border: none;
+  border: 1px solid #ccc;
   cursor: pointer;
   font-size: 18px;
-  border-radius: 5px;
+  border-radius: 50px;
+  /* border: 2px solid #F76C6C;
+  padding: 10px 30px;
+  cursor: pointer;
+  font-size: 18px; */
   margin-top: 20px;
 }
 
@@ -152,4 +156,19 @@ p {
   padding: 30px 100px;
   background-color: #fff;
   text-align: center;
+}
+
+
+.hire-link {
+  list-style: none;
+}
+
+.hire-link a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.hire-link a:hover {
+  color: #fff;
 }
