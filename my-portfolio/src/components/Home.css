@@ -1,0 +1,155 @@
+/* Basic Reset */
+body, html, ul, li, h1, p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: center; /* Center the menu */
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #fff;
+  position: relative; /* Ensure positioning relative to other elements */
+  z-index: 1000; /* Ensure header is above other elements */
+}
+
+.logo-container {
+  position: absolute;
+  left: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  border: 2px solid #F76C6C;
+  padding: 5px 10px;
+}
+
+.nav {
+  margin-left: -20%;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+.nav a.active,
+.nav a:hover {
+  color: #F76C6C;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 100px;
+  background-color: #fff;
+  position: relative; /* Ensure relative positioning for the backdrop */
+}
+
+.intro {
+  max-width: 50%;
+  margin-top: -10%;
+}
+
+.intro-tag {
+  display: inline-block;
+  background-color: #E2E9EF;
+  color: #536DFE;
+  padding: 5px 15px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.contentt {
+  font-size: 40px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.paragraph1 {
+  margin-top: 10%;
+}
+
+.names {
+  font-size: 65px;
+  margin-bottom: 0px;
+  margin-top: 100px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 24px;
+  color: #444;
+}
+
+.highlight.designer {
+  color: #F76C6C;
+}
+
+.highlight.developer {
+  color: #536DFE;
+}
+
+.hire-me-btn {
+  background-color: #F76C6C;
+  color: #fff;
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.hire-me-btn:hover {
+  background-color: #FF5959;
+}
+
+.profile-picture-container {
+  position: relative;
+  max-width: 45%; /* Adjusted for better alignment */
+  z-index: 1; /* Ensure it is above the backdrop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blue-backdrop {
+  position: absolute;
+  background-color: #90ACCE;
+  width: 457px;
+  height: 633px;
+  top: -111px;
+  right: -100px;
+  z-index: -1;
+  border-radius: 0 0 0 0px;
+}
+
+.profile-picture {
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 30px 100px;
+  background-color: #fff;
+  text-align: center;
+}

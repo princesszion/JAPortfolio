@@ -1,0 +1,144 @@
+Basic Reset
+:global(body), :global(html), :global(ul), :global(li), :global(h1), :global(p) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #000;
+  position: relative;
+}
+
+.logoContainer {
+  position: absolute;
+  left: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 5px 10px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+.nav a.active,
+.nav a:hover {
+  color: #F76C6C;
+}
+
+/* Main Content */
+.mainContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 100px;
+  background-color: #fff;
+  position: relative;
+}
+
+.profilePictureContainer {
+  position: relative;
+  max-width: 40%;
+}
+
+.blueBackdrop {
+  position: absolute;
+  background-color: #fff;
+  width: 600px;
+  height: 500px;
+  top: -80px;
+  left: -80px;
+  z-index: -1;
+  border-radius: 0px;
+  border: #90ACCE 15px solid;
+}
+
+
+
+.profilePicture {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.aboutText {
+  max-width: 55%;
+  padding-left: 30px;
+}
+
+.aboutText h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.headingLine {
+  width: 60px;
+  height: 4px;
+  background-color: #F76C6C;
+  margin-bottom: 20px;
+  
+}
+
+
+.aboutText p {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.moreInfoBtn, .resumeBtn {
+  padding: 10px 30px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50px;
+}
+
+.moreInfoBtn {
+  background-color: #fff;
+  color: #536DFE;
+  border: 2px solid #536DFE;
+}
+
+.resumeBtn {
+  background-color: #F76C6C;
+  color: #fff;
+  border: 2px solid #F76C6C;
+}
+
+.moreInfoBtn:hover {
+  background-color: #D1DCE8;
+  color: #fff;
+}
+
+.resumeBtn:hover {
+  background-color: #FF5959;
+  border-color: #FF5959;
+}
