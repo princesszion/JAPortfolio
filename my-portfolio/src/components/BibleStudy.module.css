@@ -1,85 +1,93 @@
 .bibleStudyPage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #000;
-    color: #fff;
-    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
   }
   
   .header {
-    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background: #000;
+    color: #fff;
+  }
+  
+  .headerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
   }
   
   .header h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    margin: 0;
   }
   
   .mainContent {
+    padding: 20px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    width: 80%;
-    margin-top: 40px;
   }
   
-  .formContainer {
-    width: 50%;
+  .infoSection, .formSection {
+    width: 60%;
+    margin-bottom: 40px;
   }
   
-  .formContainer p {
+  .infoSection h2, .formSection h2 {
+    font-size: 2em;
     margin-bottom: 20px;
   }
   
   .signupForm {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   
   .formGroup {
+    width: 100%;
     margin-bottom: 20px;
   }
   
   .formGroup label {
+    display: block;
     font-size: 1.2em;
     margin-bottom: 10px;
   }
   
   .formGroup input {
+    width: 100%;
     padding: 10px;
     font-size: 1em;
-    border: none;
+    border: 1px solid #ccc;
     border-radius: 5px;
   }
   
   .submitBtn {
     padding: 10px 20px;
     font-size: 1.2em;
-    background-color: #fff;
-    color: #000;
+    background-color: #000;
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
   }
   
   .submitBtn:hover {
-    background-color: #ccc;
+    background-color: #333;
   }
   
   .feedback {
     margin-top: 20px;
     font-size: 1.2em;
-  }
-  
-  .imageContainer {
-    width: 40%;
-  }
-  
-  .bibleImage {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+    color: green;
   }
   
