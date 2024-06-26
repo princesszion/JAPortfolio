@@ -49,7 +49,7 @@ body, html, ul, li, h1, p {
 
 .nav a.active,
 .nav a:hover {
-  color: #F76C6C;
+  color: #000;
 }
 
 /* Main Content */
@@ -70,7 +70,7 @@ body, html, ul, li, h1, p {
 .intro-tag {
   display: inline-block;
   background-color: #E2E9EF;
-  color: #536DFE;
+  color: #000;
   padding: 5px 15px;
   margin-bottom: 20px;
   font-size: 16px;
@@ -100,15 +100,15 @@ p {
 }
 
 .highlight.designer {
-  color: #F76C6C;
+  color: #000;
 }
 
 .highlight.developer {
-  color: #536DFE;
+  color: #000;
 }
 
 .hire-me-btn {
-  background-color: #F76C6C;
+  background-color: #000;
   color: #fff;
   padding: 10px 30px;
   border: 1px solid #ccc;
@@ -123,7 +123,7 @@ p {
 }
 
 .hire-me-btn:hover {
-  background-color: #FF5959;
+  background-color: #000;
 }
 
 .profile-picture-container {
@@ -135,19 +135,8 @@ p {
   justify-content: center;
 }
 
-.blue-backdrop {
-  position: absolute;
-  background-color: #90ACCE;
-  width: 457px;
-  height: 633px;
-  top: -111px;
-  right: -100px;
-  z-index: -1;
-  border-radius: 0 0 0 0px;
-}
-
 .profile-picture {
-  max-width: 100%;
+  max-width: 635px;
   border-radius: 20px;
 }
 
@@ -165,7 +154,7 @@ p {
 
 .hire-link a {
   text-decoration: none;
-  color: #333;
+  color: #fff;
   font-size: 16px;
 }
 

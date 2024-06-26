@@ -5,9 +5,9 @@ import './Header.css';
 const Header = () => {
   return (
     <header className="header">
-      <div className="logo-container">
+      {/* <div className="logo-container">
         <div className="logo">K</div>
-      </div>
+      </div> */}
       <nav className="nav">
         <ul>
           <li><Link to="/" className="active">Home</Link></li>

@@ -4,9 +4,10 @@
 import React from 'react';
 import './Home.css';
 import { Link } from 'react-router-dom';
+import imageUrl from '../assets/images/home.jpg';
 
 const HomePage = () => {
-  const imageUrl = "https://img.freepik.com/free-photo/black-man-with-happy-expression_155003-11386.jpg?size=626&ext=jpg"
+  // const imageUrl = "https://img.freepik.com/free-photo/black-man-with-happy-expression_155003-11386.jpg?size=626&ext=jpg"
   return (
     <div className="homepage">
       <main className="main-content">
@@ -19,7 +20,6 @@ const HomePage = () => {
           <button className="hire-me-btn"><li className="hire-link"><Link to="/about">Learn More</Link></li></button>
         </div>
         <div className="profile-picture-container">
-          <div className="blue-backdrop"></div>
           <img className="profile-picture" src={imageUrl} alt="Kenedy Jackson" />
         </div>
       </main>

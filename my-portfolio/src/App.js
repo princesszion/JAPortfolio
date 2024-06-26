@@ -44,7 +44,8 @@ import ContactPage from './components/ContactPage';
 import ContactMessagesPage from './components/ContactMessagesPage';
 import ArticlesPage from './components/ArticlesPage';
 import ArticleDetails from './components/ArticleDetails';
-import CreateArticlePage from './components/CreateArticlePage';
+import CreateArticlePage from './components/CreateArticlePage'; 
+import BibleStudyPage from './components/BibleStudyPage';
 import './App.css';
 
 const App = () => {
@@ -60,6 +61,7 @@ const App = () => {
           <Route path="/articles" element={<ArticlesPage />} />
           <Route path="/articles/:id" element={<ArticleDetails />} />
           <Route path="/create-article" element={<CreateArticlePage />} />
+          <Route path="/bible-study" element={<BibleStudyPage  />} />
         </Routes>
         <Footer />
       </div>

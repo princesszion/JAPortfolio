@@ -77,7 +77,7 @@ Basic Reset
 
 
 .profilePicture {
-  max-width: 100%;
+  max-width:500px;
   border-radius: 10px;
 }
 
@@ -95,7 +95,7 @@ Basic Reset
 .headingLine {
   width: 60px;
   height: 4px;
-  background-color: #F76C6C;
+  background-color: #000;
   margin-bottom: 20px;
   
 }
@@ -115,7 +115,7 @@ Basic Reset
 
 .moreInfoBtn, .resumeBtn {
   padding: 10px 30px;
-  border: 1px solid #ccc;
+  border: 1px solid #000;
   cursor: pointer;
   font-size: 18px;
   border-radius: 50px;
@@ -123,22 +123,18 @@ Basic Reset
 
 .moreInfoBtn {
   background-color: #fff;
-  color: #536DFE;
-  border: 2px solid #536DFE;
+  color: #000;
+  border: 2px solid #000;
 }
 
-.resumeBtn {
-  background-color: #F76C6C;
-  color: #fff;
-  border: 2px solid #F76C6C;
-}
+
 
 .moreInfoBtn:hover {
-  background-color: #D1DCE8;
+  background-color: #000;
   color: #fff;
 }
 
 .resumeBtn:hover {
-  background-color: #FF5959;
-  border-color: #FF5959;
+  background-color: #000;
+  border-color: #000;
 }

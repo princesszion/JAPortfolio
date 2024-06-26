@@ -41,7 +41,7 @@
   }
   
   .contactInfo i {
-    color: #F76C6C;
+    color: #000;
     margin-right: 10px;
     font-size: 18px;
   }
@@ -68,7 +68,7 @@
   .formGroup input, .formGroup textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #000;
     border-radius: 5px;
     font-size: 16px;
   }
@@ -79,7 +79,7 @@
   }
   
   .submitBtn {
-    background-color: #F76C6C;
+    background-color: #000;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -89,12 +89,12 @@
   }
   
   .submitBtn:hover {
-    background-color: #FF5959;
+    background-color: #000;
   }
 
   
   .feedback {
     margin-top: 20px;
     font-size: 18px;
-    color: green; /* Change color as needed */
+    color: #000; /* Change color as needed */
   }
