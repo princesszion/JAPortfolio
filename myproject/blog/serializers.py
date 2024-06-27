@@ -16,7 +16,7 @@
 
 
 from rest_framework import serializers
-from .models import BlogPost, Category, ContactMessage, User
+from .models import BlogPost, Category, ContactMessage, User, BibleStudy
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
@@ -40,4 +40,9 @@ class BlogPostSerializer(serializers.ModelSerializer):
 class ContactMessageSerializer(serializers.ModelSerializer):
     class Meta:
         model = ContactMessage
+        fields = '__all__'
+
+class BibleStudySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = BibleStudy
         fields = '__all__'
