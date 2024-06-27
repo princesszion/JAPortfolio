@@ -1,0 +1,50 @@
+.podcastPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-color: black; /* Fallback for background color */
+  }
+  
+  .content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .content h1 {
+    font-size: 4em;
+    margin: 0;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .content h2 {
+    font-size: 3em;
+    margin: 0.5em 0;
+    color: #fff;
+  }
+  
+  .content p {
+    font-size: 2em;
+    margin: 0.5em 0;
+    color: #fff;
+  }
+  
+  /* Add a black overlay with some transparency */
+  .podcastPage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  

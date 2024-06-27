@@ -47,9 +47,11 @@ const ArticlesPage = () => {
   return (
     <div className={styles.articlesPage}>
       <header className={styles.header}>
-        <h1>Latest Works</h1>
+        <h1>Articles</h1>
         <div className={styles.headingLine}></div>
-        <p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $.17 each.</p>
+        <p>Always stop by here for articles within the following thematic areas: Relationships, Faith, Purity, Love, Prayers, Career, Hope, Trust, Worship, Wisdom
+This is not an exhaustive thematic area, as the Lord inspires us to share across other areas, we shall bring it forth!
+</p>
         <nav className={styles.nav}>
           {categories.map(category => (
             <button

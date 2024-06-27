@@ -46,6 +46,7 @@ import ArticlesPage from './components/ArticlesPage';
 import ArticleDetails from './components/ArticleDetails';
 import CreateArticlePage from './components/CreateArticlePage'; 
 import BibleStudyPage from './components/BibleStudyPage';
+import PodcastPage from './components/PodcastPage';
 import './App.css';
 
 const App = () => {
@@ -62,6 +63,7 @@ const App = () => {
           <Route path="/articles/:id" element={<ArticleDetails />} />
           <Route path="/create-article" element={<CreateArticlePage />} />
           <Route path="/bible-study" element={<BibleStudyPage  />} />
+          <Route path="/podcast" element={ <PodcastPage />} />
         </Routes>
         <Footer />
       </div>

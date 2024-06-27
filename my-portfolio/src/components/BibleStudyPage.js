@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import styles from './BibleStudy.module.css';
 import bibleImage from '../assets/images/bible.jpg'; // Replace with the actual path to your image
 
+const BASE_URL = 'http://127.0.0.1:8000';
+
 const BibleStudyPage = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    first_name: '',
+    last_name: '',
     location: '',
     email: '',
-    whatsapp: ''
+    phone: '' // Change this to 'phone' to match the backend
   });
 
   const [feedback, setFeedback] = useState('');
@@ -22,15 +25,21 @@ const BibleStudyPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Logic for handling form submission goes here
-    setFeedback('Thank you for signing up! You will receive the joining links soon.');
-    setFormData({
-      firstName: '',
-      lastName: '',
-      location: '',
-      email: '',
-      whatsapp: ''
-    });
+    axios.post(`${BASE_URL}/api/api/submit-bible-study-form/`, formData)
+      .then(response => {
+        setFeedback('Thank you for signing up! You will receive the joining links soon.');
+        setFormData({
+          first_name: '',
+          last_name: '',
+          location: '',
+          email: '',
+          phone: '' // Reset the 'phone' field as well
+        });
+      })
+      .catch(error => {
+        console.error('Error submitting form:', error);
+        setFeedback('Failed to sign up. Please try again later.');
+      });
   };
 
   return (
@@ -41,30 +50,29 @@ const BibleStudyPage = () => {
       </header>
       <main className={styles.mainContent}>
         <section className={styles.infoSection}>
-          <h2>Information</h2>
           <p>Interested in joining us for a virtual bible study? Sign up and you will receive the joining links.</p>
         </section>
         <section className={styles.formSection}>
           <h2>Sign Up</h2>
           <form className={styles.signupForm} onSubmit={handleSubmit}>
             <div className={styles.formGroup}>
-              <label htmlFor="firstName">First Name</label>
+              <label htmlFor="first_name">First Name</label>
               <input
                 type="text"
-                id="firstName"
-                name="firstName"
-                value={formData.firstName}
+                id="first_name"
+                name="first_name"
+                value={formData.first_name}
                 onChange={handleChange}
                 required
               />
             </div>
             <div className={styles.formGroup}>
-              <label htmlFor="lastName">Last Name</label>
+              <label htmlFor="last_name">Last Name</label>
               <input
                 type="text"
-                id="lastName"
-                name="lastName"
-                value={formData.lastName}
+                id="last_name"
+                name="last_name"
+                value={formData.last_name}
                 onChange={handleChange}
                 required
               />
@@ -92,12 +100,12 @@ const BibleStudyPage = () => {
               />
             </div>
             <div className={styles.formGroup}>
-              <label htmlFor="whatsapp">Whatsapp Number</label>
+              <label htmlFor="phone">Whatsapp Number</label>
               <input
                 type="text"
-                id="whatsapp"
-                name="whatsapp"
-                value={formData.whatsapp}
+                id="phone"
+                name="phone"
+                value={formData.phone}
                 onChange={handleChange}
                 required
               />

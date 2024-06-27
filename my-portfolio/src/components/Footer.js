@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer-back">
       <div className="footer-content">
-        <p>&copy; 2024 Your Company. All rights reserved.</p>
+        <p> &copy; Jackson and Alice Akor Separated unto the Lord. Kigali, Rwanda.</p>
         {/* <p>
           Follow us on 
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"> Facebook</a>, 

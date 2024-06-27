@@ -23,13 +23,13 @@ body, html, ul, li, h1, p {
   align-items: center;
 }
 
-.logo {
+/* .logo {
   font-size: 24px;
   font-weight: bold;
   color: #000;
   border: 2px solid #F76C6C;
   padding: 5px 10px;
-}
+} */
 
 .nav {
   margin-left: -20%;
@@ -78,7 +78,7 @@ body, html, ul, li, h1, p {
 }
 
 .contentt {
-  font-size: 40px;
+  font-size: 24px;
   margin-top: 10%;
   margin-bottom: 10%;
 }
@@ -88,15 +88,18 @@ body, html, ul, li, h1, p {
 }
 
 .names {
-  font-size: 65px;
-  margin-bottom: 0px;
-  margin-top: 100px;
-  font-weight: bold;
+  font-size: 45px;
+  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-left: 180px;
+  font-weight: bolder;
+
 }
 
 p {
-  font-size: 24px;
+  font-size: 20px;
   color: #444;
+  max-width: 90%;
 }
 
 .highlight.designer {
@@ -128,7 +131,7 @@ p {
 
 .profile-picture-container {
   position: relative;
-  max-width: 45%; /* Adjusted for better alignment */
+  max-width: 50%; /* Adjusted for better alignment */
   z-index: 1; /* Ensure it is above the backdrop */
   display: flex;
   align-items: center;
@@ -136,8 +139,9 @@ p {
 }
 
 .profile-picture {
-  max-width: 635px;
-  border-radius: 20px;
+  max-width: 650px;
+  border-radius: 10px;
+  margin-top: -140px;
 }
 
 /* Footer */

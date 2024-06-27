@@ -183,6 +183,9 @@ const ContactPage = () => {
       <main className={styles.mainContent}>
         <div className={styles.contactInfo}>
           <div>
+          <p>Be at liberty to reach out to us! Be it a prayer request, a question, or a comment, we are excited to hear from you</p>
+          </div>
+          <div>
             <i className="fas fa-map-marker-alt"></i>
             <p>Binghamton, New York</p>
             <p>4343 Hinkle Deegan Lake Road</p>
@@ -195,7 +198,6 @@ const ContactPage = () => {
           <div>
             <i className="fas fa-envelope"></i>
             <p>support@colorlib.com</p>
-            <p>Send us your query anytime!</p>
           </div>
         </div>
         <form className={styles.contactForm} onSubmit={handleSubmit}>
