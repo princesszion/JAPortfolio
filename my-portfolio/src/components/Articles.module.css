@@ -1,96 +1,94 @@
 /* Basic Reset */
 :global(body), :global(html), :global(ul), :global(li), :global(h1), :global(h2), :global(p) {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Articles Page */
-  .articlesPage {
-    padding: 50px;
-  }
-  
-  .header {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .header h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
-  
-  .headingLine {
-    width: 60px;
-    height: 4px;
-    background-color: #000;
-    margin: 0 auto 20px;
-  }
-  
-  .header p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
-  .nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .nav button {
-    padding: 10px 20px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    font-size: 16px;
-    color: #000;
-  }
-  
-  .nav button.activeCategory {
-    color: #000;
-    border-bottom: 2px solid #000;
-  }
-  
-  .mainContent {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .article {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  }
-  
-  .article h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .article p {
-    font-size: 16px;
-    color: #666;
-  }
-  
-  .thumbnail {
-    width: 100%;
-    height: 200px; /* Set a fixed height */
-    object-fit: cover; /* Maintain aspect ratio, cover the element */
-    border-radius: 10px; /* Match the article's border radius */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Existing styles ... */
+/* Articles Page */
+.articlesPage {
+  padding: 50px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.headingLine {
+  width: 60px;
+  height: 4px;
+  background-color: #000;
+  margin: 0 auto 20px;
+}
+
+.header p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.nav button {
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #000;
+}
+
+.nav button.activeCategory {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+.mainContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.article {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.article h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.article p {
+  font-size: 16px;
+  color: #666;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
 .readMoreButton {
   display: inline-block;
   margin-top: 10px;
-  margin-left: 90px;
   padding: 10px 15px;
   background-color: #000;
   color: #fff;
@@ -101,4 +99,69 @@
 
 .readMoreButton:hover {
   background-color: #000;
+}
+
+.line {
+  margin-bottom: 50px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .articlesPage {
+    padding: 30px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .header p {
+    font-size: 14px;
+  }
+
+  .nav {
+    gap: 15px;
+  }
+
+  .nav button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .article {
+    width: 90%;
+  }
+
+  .readMoreButton {
+    margin-left: 0;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .header p {
+    font-size: 12px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .article {
+    width: 100%;
+  }
+
+  .readMoreButton {
+    padding: 8px 12px;
+  }
 }

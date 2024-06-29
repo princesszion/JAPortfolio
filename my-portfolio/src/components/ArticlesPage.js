@@ -49,9 +49,7 @@ const ArticlesPage = () => {
       <header className={styles.header}>
         <h1>Articles</h1>
         <div className={styles.headingLine}></div>
-        <p>Always stop by here for articles within the following thematic areas: Relationships, Faith, Purity, Love, Prayers, Career, Hope, Trust, Worship, Wisdom
-This is not an exhaustive thematic area, as the Lord inspires us to share across other areas, we shall bring it forth!
-</p>
+        <div className={styles.line}>Always stop by here for articles within the thematic areas below.This is not an exhaustive list of thematic areas, as the Lord inspires us to share across other areas, we shall bring it forth!</div>
         <nav className={styles.nav}>
           {categories.map(category => (
             <button

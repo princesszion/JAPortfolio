@@ -1,19 +1,18 @@
-/* Basic Reset */
-body, html, ul, li, h1, p {
+/* body, html, ul, li, h1, p {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Header */
+
 .header {
   display: flex;
-  justify-content: center; /* Center the menu */
+  justify-content: center; 
   align-items: center;
   padding: 20px 50px;
   background-color: #fff;
-  position: relative; /* Ensure positioning relative to other elements */
-  z-index: 1000; /* Ensure header is above other elements */
+  position: relative; 
+  z-index: 1000; 
 }
 
 .logo-container {
@@ -22,14 +21,6 @@ body, html, ul, li, h1, p {
   display: flex;
   align-items: center;
 }
-
-/* .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #000;
-  border: 2px solid #F76C6C;
-  padding: 5px 10px;
-} */
 
 .nav {
   margin-left: -20%;
@@ -52,14 +43,14 @@ body, html, ul, li, h1, p {
   color: #000;
 }
 
-/* Main Content */
+
 .main-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 50px 100px;
   background-color: #fff;
-  position: relative; /* Ensure relative positioning for the backdrop */
+  position: relative; 
 }
 
 .intro {
@@ -78,13 +69,21 @@ body, html, ul, li, h1, p {
 }
 
 .contentt {
-  font-size: 24px;
-  margin-top: 10%;
-  margin-bottom: 10%;
+  font-size: 12px;
+  margin-left: 89px;
+  margin-bottom: 15%;
+  
 }
 
 .paragraph1 {
   margin-top: 10%;
+  margin-bottom: 10%;
+ 
+}
+
+.vision {
+  margin-top: 0%;
+
 }
 
 .names {
@@ -118,10 +117,6 @@ p {
   cursor: pointer;
   font-size: 18px;
   border-radius: 50px;
-  /* border: 2px solid #F76C6C;
-  padding: 10px 30px;
-  cursor: pointer;
-  font-size: 18px; */
   margin-top: 20px;
 }
 
@@ -131,8 +126,8 @@ p {
 
 .profile-picture-container {
   position: relative;
-  max-width: 50%; /* Adjusted for better alignment */
-  z-index: 1; /* Ensure it is above the backdrop */
+  max-width: 50%; 
+  z-index: 1; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,7 +139,7 @@ p {
   margin-top: -140px;
 }
 
-/* Footer */
+
 .footer {
   padding: 30px 100px;
   background-color: #fff;
@@ -164,4 +159,244 @@ p {
 
 .hire-link a:hover {
   color: #fff;
+} 
+
+ */
+
+
+
+ body, html, ul, li, h1, p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #fff;
+  position: relative;
+  z-index: 1000;
+}
+
+.logo-container {
+  position: absolute;
+  left: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  margin-left: -20%;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+.nav a.active,
+.nav a:hover {
+  color: #000;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 100px;
+  background-color: #fff;
+  position: relative;
+}
+
+.intro {
+  max-width: 50%;
+  margin-top: -10%;
+}
+
+.intro-tag {
+  display: inline-block;
+  background-color: #E2E9EF;
+  color: #000;
+  padding: 5px 15px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.contentt {
+  font-size: 12px;
+  margin-left: 89px;
+  margin-bottom: 15%;
+}
+
+.paragraph1 {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.vision {
+  margin-top: 0%;
+}
+
+.names {
+  font-size: 45px;
+  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-left: 180px;
+  font-weight: bolder;
+}
+
+p {
+  font-size: 20px;
+  color: #444;
+  max-width: 90%;
+}
+
+.highlight.designer {
+  color: #000;
+}
+
+.highlight.developer {
+  color: #000;
+}
+
+.hire-me-btn {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 30px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+.hire-me-btn:hover {
+  background-color: #000;
+}
+
+.profile-picture-container {
+  position: relative;
+  max-width: 50%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-picture {
+  max-width: 650px;
+  border-radius: 10px;
+  margin-top: -140px;
+}
+
+.footer {
+  padding: 30px 100px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.hire-link {
+  list-style: none;
+}
+
+.hire-link a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.hire-link a:hover {
+  color: #fff;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .main-content {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .intro {
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .profile-picture-container {
+    max-width: 100%;
+    margin-top: 20%;
+  }
+
+  .names {
+    font-size: 36px;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 20px;
+  }
+
+  .logo-container {
+    left: 20px;
+  }
+
+  .nav {
+    margin-left: 0;
+  }
+
+  .nav ul {
+    gap: 10px;
+  }
+
+  .nav a {
+    font-size: 16px;
+  }
+
+  .names {
+    font-size: 28px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+  }
+
+  .hire-me-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .contentt {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .names {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .hire-me-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .contentt {
+    font-size: 10px;
+  }
 }

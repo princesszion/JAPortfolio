@@ -72,7 +72,7 @@
 
 import React, { useState } from 'react';
 import styles from './About.module.css';
-import image1 from '../assets/images/Jackson.jpeg';
+import image1 from '../assets/images/Jackson.png';
 import image2 from '../assets/images/Alice.png';
 
 const AboutPage = () => {
@@ -108,7 +108,7 @@ const AboutPage = () => {
           {showMoreInfo && (
             <div className={styles.moreInfo}>
               <p><ul>
-          <li>An academic & a development consultant – Currently on a journey to build more expertise in my professional life through a PhD Entrepreneurship program at the University of Louisville.  Learn more about my professional journey here (www.jacksonakor.com)</li>
+          <li>An academic & a development consultant – Currently on a journey to build more expertise in my professional life through a PhD Entrepreneurship program at the University of Louisville.  Learn more about my professional journey on <span><a href="https://www.linkedin.com/in/jacksonakor/">LinkedIn</a></span></li>
           <li>A blessed man – I love my darling Alice; you’ve added so much colour to my life.</li>
         </ul></p>
             </div>
@@ -131,7 +131,7 @@ const AboutPage = () => {
           <li>A lover of God’s Word: I love how God speaks to me, everything I am and have has come to me through the Word.</li>
           <li>I love how the Holy spirit inspires me without any drama. He talks to me like a friend talks to his friend. He causes me to know deep things that no man taught me. He is my teacher.</li>
           <li>A youth</li>
-          <li>A social worker and youth educator: find out more about my work here www.wit21hub.org and www.aliceakor.com</li>
+          <li>A social worker and youth educator: find out more about my work with <span><a href="https://wit21hub.com/">Wit21-Hub </a></span> and on <span><a href="https://www.linkedin.com/in/alice-apejoye/">LinkedIn</a></span></li>
           <li>A wife to God’s Prince: With my darling Jackie, I have enjoyed a slice of heaven here on earth.</li>
         </ul>
         </p>

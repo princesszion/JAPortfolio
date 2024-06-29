@@ -1,4 +1,4 @@
-Basic Reset
+/* Basic Reset */
 :global(body), :global(html), :global(ul), :global(li), :global(h1), :global(p) {
   margin: 0;
   padding: 0;
@@ -74,10 +74,8 @@ Basic Reset
   border: #90ACCE 15px solid;
 }
 
-
-
 .profilePicture {
-  max-width:500px;
+  max-width: 500px;
   border-radius: 10px;
 }
 
@@ -86,9 +84,10 @@ Basic Reset
   padding-left: 30px;
 }
 
-.aboutText ul{
+.aboutText ul {
   padding-left: 10%;
 }
+
 .aboutText h1 {
   font-size: 48px;
   margin-bottom: 10px;
@@ -100,9 +99,7 @@ Basic Reset
   height: 4px;
   background-color: #000;
   margin-bottom: 20px;
-  
 }
-
 
 .aboutText p {
   font-size: 18px;
@@ -130,8 +127,6 @@ Basic Reset
   border: 2px solid #000;
 }
 
-
-
 .moreInfoBtn:hover {
   background-color: #000;
   color: #fff;
@@ -140,4 +135,78 @@ Basic Reset
 .resumeBtn:hover {
   background-color: #000;
   border-color: #000;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .mainContent {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .profilePictureContainer, .aboutText {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .blueBackdrop {
+    width: 80%;
+    height: 400px;
+    top: -40px;
+    left: -40px;
+  }
+
+  .aboutText h1 {
+    font-size: 30px;
+  }
+
+  .aboutText p {
+    font-size: 16px;
+  }
+
+  .nav ul {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 20px;
+  }
+
+  .logoContainer {
+    left: 20px;
+  }
+
+  .nav ul {
+    gap: 10px;
+  }
+
+  .nav a {
+    font-size: 16px;
+  }
+
+  .aboutText h1 {
+    font-size: 28px;
+  }
+
+  .moreInfoBtn, .resumeBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutText h1 {
+    font-size: 24px;
+  }
+
+  .aboutText p {
+    font-size: 14px;
+  }
+
+  .moreInfoBtn, .resumeBtn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
 }

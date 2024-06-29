@@ -187,17 +187,16 @@ const ContactPage = () => {
           </div>
           <div>
             <i className="fas fa-map-marker-alt"></i>
-            <p>Binghamton, New York</p>
-            <p>4343 Hinkle Deegan Lake Road</p>
+            <p>40, Gatehills Estate</p>
+            <p>Kigali, Rwanda</p>
           </div>
           <div>
             <i className="fas fa-phone"></i>
-            <p>00 (958) 9865 562</p>
-            <p>Mon to Fri 9am to 6 pm</p>
+            <p>+250 780 5241 570</p>
           </div>
           <div>
             <i className="fas fa-envelope"></i>
-            <p>support@colorlib.com</p>
+            <p>hello@jacksonandalice.com</p>
           </div>
         </div>
         <form className={styles.contactForm} onSubmit={handleSubmit}>
