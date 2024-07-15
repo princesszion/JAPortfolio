@@ -100,7 +100,7 @@ const AboutPage = () => {
           <li>A believer in the birth, the death and resurrection of Jesus Christ – This is the hope of my calling.</li>
           <li>A teacher of God’s word – I love how that the Word of God touches on every area of human existence.</li>
           <li>Filled with the holy ghost – What joy to have the holy spirit teach you all things!</li>
-          <li>A mentee to fathers and mothers  in the faith  - Several mentors  have laid hands upon my head and poured into me!</li>
+          <li>A son to fathers and mothers  in the faith. Several parents in the faith have laid hands on me and poured into me!</li>
           <li>A mentor to several young people -  Endless joy to see you living separated unto the Lord.</li>
           <li>A recreational player of Tennis, Badminton, Golf and Chess – For bodily exercise profits little</li>
         </ul>
@@ -130,7 +130,6 @@ const AboutPage = () => {
           <li>A believer in the God of the Bible</li>
           <li>A lover of God’s Word: I love how God speaks to me, everything I am and have has come to me through the Word.</li>
           <li>I love how the Holy spirit inspires me without any drama. He talks to me like a friend talks to his friend. He causes me to know deep things that no man taught me. He is my teacher.</li>
-          <li>A youth</li>
           <li>A social worker and youth educator: find out more about my work with <span><a href="https://wit21hub.com/">Wit21-Hub </a></span> and on <span><a href="https://www.linkedin.com/in/alice-apejoye/">LinkedIn</a></span></li>
           <li>A wife to God’s Prince: With my darling Jackie, I have enjoyed a slice of heaven here on earth.</li>
         </ul>
