@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styles from './ContactMessages.module.css';
 
-const BASE_URL = 'http://127.0.0.1:8000'; // Base URL for Django server
+const BASE_URL = 'http://212.129.37.106:8081'; // Base URL for Django server
 
 const ContactMessagesPage = () => {
   const [messages, setMessages] = useState([]);

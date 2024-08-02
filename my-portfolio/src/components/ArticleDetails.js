@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import styles from './ArticleDetails.module.css';
 
-const BASE_URL = 'http://127.0.0.1:8000';
+const BASE_URL = 'http://212.129.37.106:8081';
 
 const ArticleDetails = () => {
   const { id } = useParams();

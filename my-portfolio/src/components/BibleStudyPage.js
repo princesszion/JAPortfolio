@@ -3,7 +3,7 @@ import axios from 'axios';
 import styles from './BibleStudy.module.css';
 import bibleImage from '../assets/images/bible.jpg'; // Replace with the actual path to your image
 
-const BASE_URL = 'http://127.0.0.1:8000';
+const BASE_URL = '"http://212.129.37.106:8081/';
 
 const BibleStudyPage = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +25,7 @@ const BibleStudyPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post(`${BASE_URL}/api/api/submit-bible-study-form/`, formData)
+    axios.post('http://212.129.37.106:8081/api/api/submit-bible-study-form/', formData)
       .then(response => {
         setFeedback('Thank you for signing up! You will receive the joining links soon.');
         setFormData({

@@ -3,15 +3,20 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import styles from './Articles.module.css';
 
-const BASE_URL = 'http://127.0.0.1:8000'; // Base URL for Django server
+const BASE_URL = 'http://127.0.0.1:8000/api/api/'; // Base URL for Django server
 
 const ArticlesPage = () => {
   const [selectedCategory, setSelectedCategory] = useState(0); // Use ID 0 for "All Categories"
   const [articles, setArticles] = useState([]);
   const [categories, setCategories] = useState([]);
+  const https = require('https');
+  
 
+  const agent = new https.Agent({
+    rejectUnauthorized: false
+  });
   useEffect(() => {
-    axios.get(`${BASE_URL}/api/api/categories/`)
+    axios.get('http://212.129.37.106:8081/api/api/categories/',{ httpsAgent:agent})
       .then(response => {
         console.log('Categories fetched:', response.data); // Debugging log
         setCategories([{ id: 0, name: 'All Categories' }, ...response.data]);
@@ -20,7 +25,7 @@ const ArticlesPage = () => {
         console.error('Error fetching categories:', error);
       });
 
-    axios.get(`${BASE_URL}/api/api/blogposts/`)
+    axios.get('http://212.129.37.106:8081/api/api/blogposts/')
       .then(response => {
         console.log('Articles fetched:', response.data); // Debugging log
         setArticles(response.data);
