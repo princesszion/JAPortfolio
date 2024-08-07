@@ -3,11 +3,65 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  height: 100%;
+}
+/* Ensure body and html don't cause overflow */
+:global(body), :global(html) {
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
-/* Articles Page */
+/* Make sure images fit within their container */
+.thumbnail {
+  width: 100%;
+  max-width: 100%; /* Ensure image doesn't overflow its container */
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Check container widths and padding */
+.pageContainer, .mainContent, .header, .footer {
+  width: 100%;
+  overflow-x: hidden;
+  padding: 0 20px; /* Adjust padding if necessary to prevent overflow */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Check for unexpected margins */
+.article {
+  margin: 0 auto; /* Center the article within its container */
+  width: calc(33.333% - 40px); /* Responsive width */
+}
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+.header, .mainContent, .footer {
+  width: 100%;
+}
+
+.mainContent {
+  flex: 1; /* Takes remaining space */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.footer {
+  background-color: #f9f9f9;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Other styles remain the same */
 .articlesPage {
-  padding: 50px;
+  padding: 50px 20px;
 }
 
 .header {
@@ -27,10 +81,10 @@
   margin: 0 auto 20px;
 }
 
-.header p {
+.line {
+  margin-bottom: 30px;
   font-size: 16px;
   color: #666;
-  margin-bottom: 20px;
 }
 
 .nav {
@@ -54,19 +108,17 @@
   border-bottom: 2px solid #000;
 }
 
-.mainContent {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
 .article {
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 10px;
-  width: 300px;
+  width: calc(33.333% - 40px); /* Responsive width with margin */
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.article:hover {
+  transform: translateY(-5px);
 }
 
 .article h2 {
@@ -98,21 +150,17 @@
 }
 
 .readMoreButton:hover {
-  background-color: #000;
-}
-
-.line {
-  margin-bottom: 50px;
+  background-color: #333;
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .articlesPage {
     padding: 30px;
   }
 
   .header h1 {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   .header p {
@@ -129,11 +177,29 @@
   }
 
   .article {
-    width: 90%;
+    width: calc(50% - 40px); /* Responsive width for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .header p {
+    font-size: 14px;
+  }
+
+  .nav button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .article {
+    width: calc(100% - 40px); /* Full width for smaller devices */
   }
 
   .readMoreButton {
-    margin-left: 0;
     padding: 10px 15px;
   }
 }
@@ -159,9 +225,29 @@
 
   .article {
     width: 100%;
+    margin-bottom: 20px;
   }
 
   .readMoreButton {
     padding: 8px 12px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .article {
+    width: calc(50% - 40px);
+  }
+}
+
+@media (max-width: 768px) {
+  .article {
+    width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .article {
+    width: 100%;
   }
 }

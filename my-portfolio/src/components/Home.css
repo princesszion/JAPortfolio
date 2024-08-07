@@ -1,181 +1,24 @@
-/* body, html, ul, li, h1, p {
+/* Global Styles */
+body, html, ul, li, h1, p {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  height: 100%;
 }
 
-
-.header {
+.homepage {
   display: flex;
-  justify-content: center; 
-  align-items: center;
-  padding: 20px 50px;
-  background-color: #fff;
-  position: relative; 
-  z-index: 1000; 
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-.logo-container {
-  position: absolute;
-  left: 50px;
-  display: flex;
-  align-items: center;
-}
-
-.nav {
-  margin-left: -20%;
-}
-
-.nav ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.nav a {
-  text-decoration: none;
-  color: #000;
-  font-size: 18px;
-}
-
-.nav a.active,
-.nav a:hover {
-  color: #000;
-}
-
-
-.main-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 50px 100px;
-  background-color: #fff;
-  position: relative; 
-}
-
-.intro {
-  max-width: 50%;
-  margin-top: -10%;
-}
-
-.intro-tag {
-  display: inline-block;
-  background-color: #E2E9EF;
-  color: #000;
-  padding: 5px 15px;
-  margin-bottom: 20px;
-  font-size: 16px;
-  border-radius: 5px;
-}
-
-.contentt {
-  font-size: 12px;
-  margin-left: 89px;
-  margin-bottom: 15%;
-  
-}
-
-.paragraph1 {
-  margin-top: 10%;
-  margin-bottom: 10%;
- 
-}
-
-.vision {
-  margin-top: 0%;
-
-}
-
-.names {
-  font-size: 45px;
-  margin-bottom: 100px;
-  margin-top: 50px;
-  margin-left: 180px;
-  font-weight: bolder;
-
-}
-
-p {
-  font-size: 20px;
-  color: #444;
-  max-width: 90%;
-}
-
-.highlight.designer {
-  color: #000;
-}
-
-.highlight.developer {
-  color: #000;
-}
-
-.hire-me-btn {
-  background-color: #000;
-  color: #fff;
-  padding: 10px 30px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  font-size: 18px;
-  border-radius: 50px;
-  margin-top: 20px;
-}
-
-.hire-me-btn:hover {
-  background-color: #000;
-}
-
-.profile-picture-container {
-  position: relative;
-  max-width: 50%; 
-  z-index: 1; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.profile-picture {
-  max-width: 650px;
-  border-radius: 10px;
-  margin-top: -140px;
-}
-
-
-.footer {
-  padding: 30px 100px;
-  background-color: #fff;
-  text-align: center;
-}
-
-
-.hire-link {
-  list-style: none;
-}
-
-.hire-link a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 16px;
-}
-
-.hire-link a:hover {
-  color: #fff;
-} 
-
- */
-
-
-
- body, html, ul, li, h1, p {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Header Styles */
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 50px;
+  padding: 20px;
   background-color: #fff;
   position: relative;
   z-index: 1000;
@@ -189,13 +32,16 @@ p {
 }
 
 .nav {
-  margin-left: -20%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .nav ul {
   list-style: none;
   display: flex;
   gap: 30px;
+  padding: 0;
 }
 
 .nav a {
@@ -209,18 +55,21 @@ p {
   color: #000;
 }
 
+/* Main Content Styles */
 .main-content {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  padding: 50px 100px;
+  flex-wrap: wrap;
   background-color: #fff;
-  position: relative;
+  flex: 1;
+  padding: 50px 10%;
 }
 
 .intro {
-  max-width: 50%;
-  margin-top: -10%;
+  flex: 1;
+  margin-top: 0;
+  max-width: 600px;
 }
 
 .intro-tag {
@@ -235,13 +84,14 @@ p {
 
 .contentt {
   font-size: 12px;
-  margin-left: 89px;
-  margin-bottom: 15%;
+  margin-left: 10px;
+  margin-bottom: 5%;
+  text-align: center;
 }
 
 .paragraph1 {
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .vision {
@@ -249,23 +99,21 @@ p {
 }
 
 .names {
-  font-size: 45px;
-  margin-bottom: 100px;
-  margin-top: 50px;
-  margin-left: 180px;
+  font-size: 36px;
+  margin-bottom: 20px;
+  margin-top: 20px;
   font-weight: bolder;
+  text-align: center;
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
   color: #444;
-  max-width: 90%;
+  max-width: 100%;
+  line-height: 1.6;
 }
 
-.highlight.designer {
-  color: #000;
-}
-
+.highlight.designer,
 .highlight.developer {
   color: #000;
 }
@@ -279,31 +127,32 @@ p {
   font-size: 18px;
   border-radius: 50px;
   margin-top: 20px;
+  text-align: center;
 }
 
 .hire-me-btn:hover {
-  background-color: #000;
+  background-color: #333;
 }
 
 .profile-picture-container {
-  position: relative;
-  max-width: 50%;
-  z-index: 1;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 0;
 }
 
 .profile-picture {
-  max-width: 650px;
+  max-width: 100%;
+  height: auto;
   border-radius: 10px;
-  margin-top: -140px;
 }
 
 .footer {
-  padding: 30px 100px;
+  padding: 20px;
   background-color: #fff;
   text-align: center;
+  margin-top: auto;
 }
 
 .hire-link {
@@ -321,40 +170,35 @@ p {
 }
 
 /* Media Queries for Responsiveness */
+@media (max-width: 1400px) {
+  .main-content {
+    padding: 40px 5%;
+  }
+}
+
 @media (max-width: 1024px) {
   .main-content {
     flex-direction: column;
-    padding: 20px;
+    padding: 20px 5%;
   }
 
-  .intro {
+  .intro, .profile-picture-container {
     max-width: 100%;
-    margin-top: 0;
-  }
-
-  .profile-picture-container {
-    max-width: 100%;
-    margin-top: 20%;
+    margin-bottom: 20px;
   }
 
   .names {
-    font-size: 36px;
-    margin-left: 0;
-    text-align: center;
+    font-size: 32px;
   }
 }
 
 @media (max-width: 768px) {
   .header {
-    padding: 20px 20px;
+    padding: 20px;
   }
 
   .logo-container {
     left: 20px;
-  }
-
-  .nav {
-    margin-left: 0;
   }
 
   .nav ul {
@@ -367,8 +211,7 @@ p {
 
   .names {
     font-size: 28px;
-    margin-bottom: 50px;
-    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .hire-me-btn {
