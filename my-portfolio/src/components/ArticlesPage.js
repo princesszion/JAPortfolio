@@ -99,7 +99,7 @@ const ArticlesPage = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    axios.get('http://212.129.37.106:8081/api/api/categories/')
+    axios.get('https://api.jacksonandalice.com:8081/api/api/categories/')
       .then(response => {
         setCategories([{ id: 0, name: 'All Categories' }, ...response.data]);
       })
@@ -107,7 +107,7 @@ const ArticlesPage = () => {
         console.error('Error fetching categories:', error);
       });
 
-    axios.get('http://212.129.37.106:8081/api/api/blogposts/')
+    axios.get('https://api.jacksonandalice.com:8081/api/api/blogposts/')
       .then(response => {
         setArticles(response.data);
       })

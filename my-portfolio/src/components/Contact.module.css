@@ -10,6 +10,9 @@
 .contactPage {
   padding: 50px;
   background-color: #f9f9f9;
+  min-height: 100vh; /* Ensure the page takes up the full viewport height */
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -27,6 +30,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex: 1; /* Allow mainContent to grow and take up available space */
 }
 
 .contactInfo {
@@ -89,13 +93,23 @@ textarea {
 }
 
 .submitBtn:hover {
-  background-color: #000;
+  background-color: #333;
 }
 
 .feedback {
   margin-top: 20px;
   font-size: 18px;
   color: #000;
+}
+
+/* Footer */
+.footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  margin-top: auto; /* Pushes footer to the bottom of the page */
+  width: 100%;
 }
 
 /* Media Queries for Responsiveness */

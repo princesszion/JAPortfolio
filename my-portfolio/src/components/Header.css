@@ -41,3 +41,46 @@
 .nav a:hover, .nav a.active {
   color: #F76C6C;
 }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav a {
+    font-size: 14px;
+    padding: 10px 0;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  .nav ul {
+    gap: 5px;
+  }
+
+  .nav a {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+}
