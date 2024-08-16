@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import styles from './ArticleDetails.module.css';
 
-const BASE_URL = 'https://api.jacksonandalice.com:8081';
+const BASE_URL = 'https://nolimit-djangojacksonandalice.fjyxll.easypanel.host';
 
 const ArticleDetails = () => {
   const { id } = useParams();
@@ -28,11 +28,14 @@ const ArticleDetails = () => {
   ));
 
   return (
-    <div className={styles.articleDetails}>
-      <h1>{article.title}</h1>
-      <img src={`${BASE_URL}${article.thumbnail}`} alt={article.title} className={styles.thumbnail} />
-      {paragraphs}
-      <p className={styles.author}>By {article.author}</p>
+    <div className={styles.articleDetailsContainer}>
+      <div className={styles.articleDetails}>
+        <h1>{article.title}</h1>
+        <img src={`${BASE_URL}${article.thumbnail}`} alt={article.title} className={styles.thumbnail} />
+        {paragraphs}
+        <p className={styles.author}>By {article.author}</p>
+      </div>
+      
     </div>
   );
 };

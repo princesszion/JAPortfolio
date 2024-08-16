@@ -10,38 +10,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh; /* Full viewport height */
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .mainContent {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 20px; /* Reduced padding */
+  padding: 30px 20px;
   width: 100%;
   max-width: 1200px;
   flex-wrap: wrap;
-  gap: 10px; /* Reduced gap between elements */
-  flex: 1; /* Allow mainContent to grow and fill space */
+  gap: 20px;
 }
 
 .profilePictureContainer, .profilePictureContainer2 {
   position: relative;
   flex: 1;
-  max-width: 45%; /* Reduced max-width to bring content closer */
-}
-
-.blueBackdrop {
-  position: absolute;
-  background-color: #fff;
-  width: 100%;
-  height: 0;
-  padding-bottom: 100%;
-  top: -20px;
-  left: -20px;
-  z-index: -1;
-  border-radius: 0px;
-  border: #90ACCE 15px solid;
+  max-width: 45%;
+  min-width: 300px;
 }
 
 .profilePicture {
@@ -52,16 +40,12 @@
 
 .aboutText, .aboutText1 {
   flex: 1;
-  padding-left: 15px; /* Reduced padding-left */
   max-width: 50%;
-}
-
-.aboutText ul, .aboutText1 ul {
-  padding-left: 10%;
+  min-width: 300px;
 }
 
 .aboutText h1, .aboutText1 h1 {
-  font-size: 2.5rem; /* Increased for better readability */
+  font-size: 2.5rem;
   margin-bottom: 10px;
   font-weight: bold;
 }
@@ -70,33 +54,28 @@
   width: 60px;
   height: 4px;
   background-color: #000;
-  margin-bottom: 15px; /* Reduced bottom margin */
+  margin-bottom: 15px;
 }
 
 .aboutText p, .aboutText1 p {
-  font-size: 1rem; /* Increased for better readability */
+  font-size: 1rem;
   color: #444;
   line-height: 1.6;
-  margin-bottom: 15px; /* Reduced bottom margin */
+  margin-bottom: 15px;
 }
 
 .buttons {
   display: flex;
-  gap: 15px; /* Reduced gap between buttons */
+  gap: 15px;
 }
 
-.moreInfoBtn, .resumeBtn {
-  padding: 8px 25px; /* Slightly reduced padding */
+.moreInfoBtn {
+  padding: 8px 25px;
   border: 1px solid #000;
   cursor: pointer;
   font-size: 1rem;
   border-radius: 50px;
-}
-
-.moreInfoBtn {
-  background-color: #fff;
-  color: #000;
-  border: 2px solid #000;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .moreInfoBtn:hover {
@@ -104,77 +83,33 @@
   color: #fff;
 }
 
-.resumeBtn:hover {
-  background-color: #000;
-  border-color: #000;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-  width: 100%;
-  margin-top: auto; /* Pushes the footer to the bottom */
-}
-
-/* Media Queries for Responsiveness */
+/* Responsive Adjustments */
 @media (max-width: 1024px) {
   .mainContent {
     flex-direction: column;
-    padding: 20px;
+    align-items: center;
   }
 
   .profilePictureContainer, .profilePictureContainer2, .aboutText, .aboutText1 {
     max-width: 100%;
-    padding: 0;
-    margin-bottom: 15px; /* Reduced bottom margin */
-  }
-
-  .blueBackdrop {
-    width: 80%;
-    height: 400px;
-    top: -20px;
-    left: -20px;
+    text-align: center;
   }
 
   .aboutText h1, .aboutText1 h1 {
     font-size: 2rem;
   }
-
-  .aboutText p, .aboutText1 p {
-    font-size: 0.9rem;
-  }
-
-  .nav ul {
-    gap: 15px;
-  }
 }
 
 @media (max-width: 768px) {
-  .header {
-    padding: 20px;
+  .profilePictureContainer, .profilePictureContainer2 {
+    order: -1;
   }
 
-  .logoContainer {
-    left: 20px;
+  .aboutText ul, .aboutText1 ul {
+    padding-left: 0;
   }
 
-  .nav ul {
-    gap: 10px;
-  }
-
-  .nav a {
-    font-size: 0.9rem;
-  }
-
-  .aboutText h1, .aboutText1 h1 {
-    font-size: 1.8rem;
-  }
-
-  .moreInfoBtn, .resumeBtn {
-    padding: 10px 20px;
+  .aboutText p, .aboutText1 p {
     font-size: 0.9rem;
   }
 }
@@ -188,7 +123,7 @@
     font-size: 0.8rem;
   }
 
-  .moreInfoBtn, .resumeBtn {
+  .moreInfoBtn {
     padding: 8px 16px;
     font-size: 0.8rem;
   }

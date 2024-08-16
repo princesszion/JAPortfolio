@@ -25,7 +25,7 @@ const BibleStudyPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('https://api.jacksonandalice.com:8081/api/api/submit-bible-study-form/', formData)
+    axios.post('https://nolimit-djangojacksonandalice.fjyxll.easypanel.host/api/api/submit-bible-study-form/', formData)
       .then(response => {
         setFeedback('Thank you for signing up! You will receive the joining links soon.');
         setFormData({

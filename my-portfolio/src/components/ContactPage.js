@@ -33,7 +33,7 @@ const ContactPage = () => {
       subject: formData.subject,
       message: formData.message
     };
-    axios.post('https://api.jacksonandalice.com:8081/api/api/submit-contact-form/', dataToSend, {
+    axios.post('https://nolimit-djangojacksonandalice.fjyxll.easypanel.host/api/api/submit-contact-form/', dataToSend, {
       headers: {
         'Content-Type': 'application/json'
       }

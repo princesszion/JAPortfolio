@@ -1,7 +1,91 @@
+// // import React, { useState, useEffect } from 'react';
+// // import { Link } from 'react-router-dom';
+// // import axios from 'axios';
+// // import styles from './Articles.module.css';
+
+// // const BASE_URL = 'http://127.0.0.1:8000/api/api/'; // Base URL for Django server
+
+// // const ArticlesPage = () => {
+// //   const [selectedCategory, setSelectedCategory] = useState(0); // Use ID 0 for "All Categories"
+// //   const [articles, setArticles] = useState([]);
+// //   const [categories, setCategories] = useState([]);
+
+// //   useEffect(() => {
+// //     axios.get('https://nolimit-djangojacksonandalice.fjyxll.easypanel.host/api/api/categories/')
+// //       .then(response => {
+// //         setCategories([{ id: 0, name: 'All Categories' }, ...response.data]);
+// //       })
+// //       .catch(error => {
+// //         console.error('Error fetching categories:', error);
+// //       });
+
+// //     axios.get('https://nolimit-djangojacksonandalice.fjyxll.easypanel.host/api/api/blogposts/')
+// //       .then(response => {
+// //         setArticles(response.data);
+// //       })
+// //       .catch(error => {
+// //         console.error('Error fetching articles:', error);
+// //       });
+// //   }, []);
+
+// //   const handleCategoryClick = (category) => {
+// //     setSelectedCategory(category.id);
+// //   };
+
+// //   const filteredArticles = selectedCategory === 0
+// //     ? articles
+// //     : articles.filter(article => article.category.id === selectedCategory);
+
+// //   return (
+// //     <div className={styles.pageContainer}>
+// //       <header className={styles.header}>
+// //         <h1>Articles</h1>
+// //         <div className={styles.headingLine}></div>
+// //         <div className={styles.line}>
+// //           Always stop by here for articles within the thematic areas below. This is not an exhaustive list of thematic areas; as the Lord inspires us to share across other areas, we shall bring it forth!
+// //         </div>
+// //         <nav className={styles.nav}>
+// //           {categories.map(category => (
+// //             <button
+// //               key={category.id}
+// //               className={category.id === selectedCategory ? styles.activeCategory : ''}
+// //               onClick={() => handleCategoryClick(category)}
+// //             >
+// //               {category.name}
+// //             </button>
+// //           ))}
+// //         </nav>
+// //       </header>
+// //       <main className={styles.mainContent}>
+// //         {filteredArticles.map(article => {
+// //           const imageUrl = article.thumbnail.startsWith('http') ? article.thumbnail : `${BASE_URL}${article.thumbnail}`;
+// //           const previewContent = article.content.split(" ").slice(0, 20).join(" ") + "...";
+// //           return (
+// //             <div key={article.id} className={styles.article}>
+// //               <img src={imageUrl} alt={article.title} className={styles.thumbnail} />
+// //               <h2>{article.title}</h2>
+// //               <p>{previewContent}</p>
+// //               <Link to={`/articles/${article.id}`} className={styles.readMoreButton}>Read More</Link>
+// //             </div>
+// //           );
+// //         })}
+// //       </main>
+      
+// //     </div>
+// //   );
+// // };
+
+// // export default ArticlesPage;
+
+
+
 // import React, { useState, useEffect } from 'react';
 // import { Link } from 'react-router-dom';
 // import axios from 'axios';
+// import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 // import styles from './Articles.module.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 // const BASE_URL = 'http://127.0.0.1:8000/api/api/'; // Base URL for Django server
 
@@ -11,21 +95,16 @@
 //   const [categories, setCategories] = useState([]);
 
 //   useEffect(() => {
-    
-
-    
-//     axios.get('http://212.129.37.106:8081/api/api/categories/')
+//     axios.get('https://nolimit-djangojacksonandalice.fjyxll.easypanel.host/api/api/categories/')
 //       .then(response => {
-//         console.log('Categories fetched:', response.data); // Debugging log
 //         setCategories([{ id: 0, name: 'All Categories' }, ...response.data]);
 //       })
 //       .catch(error => {
 //         console.error('Error fetching categories:', error);
 //       });
 
-//     axios.get('http://212.129.37.106:8081/api/api/blogposts/')
+//     axios.get('https://nolimit-djangojacksonandalice.fjyxll.easypanel.host/api/api/blogposts/')
 //       .then(response => {
-//         console.log('Articles fetched:', response.data); // Debugging log
 //         setArticles(response.data);
 //       })
 //       .catch(error => {
@@ -34,30 +113,26 @@
 //   }, []);
 
 //   const handleCategoryClick = (category) => {
-//     console.log('Category clicked:', category); // Debugging log
 //     setSelectedCategory(category.id);
 //   };
 
 //   const filteredArticles = selectedCategory === 0
 //     ? articles
-//     : articles.filter(article => {
-//         console.log('Article category:', article.category.id, 'Selected category:', selectedCategory); // Debugging log
-//         return article.category.id === selectedCategory;
-//       });
-
-//   console.log('Filtered Articles:', filteredArticles); // Debugging log
+//     : articles.filter(article => article.category.id === selectedCategory);
 
 //   return (
-//     <div className={styles.articlesPage}>
-//       <header className={styles.header}>
+//     <div className={`${styles.pageContainer} container`}>
+//       <header className={`${styles.header} text-center mb-4`}>
 //         <h1>Articles</h1>
-//         <div className={styles.headingLine}></div>
-//         <div className={styles.line}>Always stop by here for articles within the thematic areas below.This is not an exhaustive list of thematic areas, as the Lord inspires us to share across other areas, we shall bring it forth!</div>
-//         <nav className={styles.nav}>
+//         <div className={`${styles.headingLine} mx-auto`}></div>
+//         <p className="text-muted">
+//           Always stop by here for articles within the thematic areas below. This is not an exhaustive list of thematic areas; as the Lord inspires us to share across other areas, we shall bring it forth!
+//         </p>
+//         <nav className="d-flex justify-content-center flex-wrap mt-3">
 //           {categories.map(category => (
 //             <button
 //               key={category.id}
-//               className={category.id === selectedCategory ? styles.activeCategory : ''}
+//               className={`btn ${category.id === selectedCategory ? 'btn-dark' : 'btn-outline-dark'} mx-2 my-1`}
 //               onClick={() => handleCategoryClick(category)}
 //             >
 //               {category.name}
@@ -65,17 +140,22 @@
 //           ))}
 //         </nav>
 //       </header>
-//       <main className={styles.mainContent}>
+//       <main className={`${styles.mainContent} row`}>
 //         {filteredArticles.map(article => {
 //           const imageUrl = article.thumbnail.startsWith('http') ? article.thumbnail : `${BASE_URL}${article.thumbnail}`;
-//           const previewContent = article.content.split(" ").slice(0, 20).join(" ") + "..."; // Show only the first 20 words
+//           const previewContent = article.content.split(" ").slice(0, 20).join(" ") + "...";
 //           return (
-//             <div key={article.id} className={styles.article}>
-//               <img src={imageUrl} alt={article.title} className={styles.thumbnail} />
-//               <h2>{article.title}</h2>
-//               <p>{previewContent}</p>
-//               <Link to={`/articles/${article.id}`} className={styles.readMoreButton}>Read More</Link>
-//               {/* <p className={styles.author}>By {article.author}</p> */}
+//             <div key={article.id} className="col-md-6 col-lg-4 mb-4">
+//               <div className={`${styles.article} card`}>
+//                 <img src={imageUrl} alt={article.title} className={`${styles.thumbnail} card-img-top`} />
+//                 <div className="card-body">
+//                   <h2 className="card-title">{article.title}</h2>
+//                   <p className="card-text">{previewContent}</p>
+//                   <Link to={`/articles/${article.id}`} className={`${styles.readMoreButton} btn btn-primary`}>
+//                     Read More
+//                   </Link>
+//                 </div>
+//               </div>
 //             </div>
 //           );
 //         })}
@@ -86,9 +166,11 @@
 
 // export default ArticlesPage;
 
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import styles from './Articles.module.css';
 
 const BASE_URL = 'http://127.0.0.1:8000/api/api/'; // Base URL for Django server
@@ -99,7 +181,7 @@ const ArticlesPage = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    axios.get('https://api.jacksonandalice.com:8081/api/api/categories/')
+    axios.get('https://nolimit-djangojacksonandalice.fjyxll.easypanel.host/api/api/categories/')
       .then(response => {
         setCategories([{ id: 0, name: 'All Categories' }, ...response.data]);
       })
@@ -107,7 +189,7 @@ const ArticlesPage = () => {
         console.error('Error fetching categories:', error);
       });
 
-    axios.get('https://api.jacksonandalice.com:8081/api/api/blogposts/')
+    axios.get('https://nolimit-djangojacksonandalice.fjyxll.easypanel.host/api/api/blogposts/')
       .then(response => {
         setArticles(response.data);
       })
@@ -125,18 +207,18 @@ const ArticlesPage = () => {
     : articles.filter(article => article.category.id === selectedCategory);
 
   return (
-    <div className={styles.pageContainer}>
-      <header className={styles.header}>
+    <div className={`${styles.pageContainer} container`}>
+      <header className={`${styles.header} text-center mb-4`}>
         <h1>Articles</h1>
-        <div className={styles.headingLine}></div>
-        <div className={styles.line}>
+        <div className={`${styles.headingLine} mx-auto`}></div>
+        <p className="text-muted">
           Always stop by here for articles within the thematic areas below. This is not an exhaustive list of thematic areas; as the Lord inspires us to share across other areas, we shall bring it forth!
-        </div>
-        <nav className={styles.nav}>
+        </p>
+        <nav className="d-flex justify-content-center flex-wrap mt-3">
           {categories.map(category => (
             <button
               key={category.id}
-              className={category.id === selectedCategory ? styles.activeCategory : ''}
+              className={`btn ${category.id === selectedCategory ? 'btn-dark' : 'btn-outline-dark'} mx-2 my-1`}
               onClick={() => handleCategoryClick(category)}
             >
               {category.name}
@@ -144,21 +226,26 @@ const ArticlesPage = () => {
           ))}
         </nav>
       </header>
-      <main className={styles.mainContent}>
+      <main className={`${styles.mainContent} row`}>
         {filteredArticles.map(article => {
           const imageUrl = article.thumbnail.startsWith('http') ? article.thumbnail : `${BASE_URL}${article.thumbnail}`;
           const previewContent = article.content.split(" ").slice(0, 20).join(" ") + "...";
           return (
-            <div key={article.id} className={styles.article}>
-              <img src={imageUrl} alt={article.title} className={styles.thumbnail} />
-              <h2>{article.title}</h2>
-              <p>{previewContent}</p>
-              <Link to={`/articles/${article.id}`} className={styles.readMoreButton}>Read More</Link>
+            <div key={article.id} className="col-md-12 col-lg-4 mb-4">
+              <div className={`${styles.article} card`}>
+                <img src={imageUrl} alt={article.title} className={`${styles.thumbnail} card-img-top`} />
+                <div className="card-body">
+                  <h2 className="card-title">{article.title}</h2>
+                  <p className="card-text">{previewContent}</p>
+                  <Link to={`/articles/${article.id}`} className={`${styles.readMoreButton} btn btn-primary`}>
+                    Read More
+                  </Link>
+                </div>
+              </div>
             </div>
           );
         })}
       </main>
-      
     </div>
   );
 };

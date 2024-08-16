@@ -13,7 +13,7 @@ body, html, ul, li, h1, p {
   overflow-x: hidden;
 }
 
-/* Header Styles */
+/* Header Styles - Original Design Restored */
 .header {
   display: flex;
   justify-content: center;
@@ -57,29 +57,14 @@ body, html, ul, li, h1, p {
 
 /* Main Content Styles */
 .main-content {
-  display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  flex-wrap: wrap;
   background-color: #fff;
-  flex: 1;
-  padding: 50px 10%;
+  padding: 50px 0;
 }
 
 .intro {
-  flex: 1;
   margin-top: 0;
-  max-width: 600px;
-}
-
-.intro-tag {
-  display: inline-block;
-  background-color: #E2E9EF;
-  color: #000;
-  padding: 5px 15px;
-  margin-bottom: 20px;
-  font-size: 16px;
-  border-radius: 5px;
 }
 
 .contentt {
@@ -103,7 +88,6 @@ body, html, ul, li, h1, p {
   margin-bottom: 20px;
   margin-top: 20px;
   font-weight: bolder;
-  text-align: center;
 }
 
 p {
@@ -127,7 +111,6 @@ p {
   font-size: 18px;
   border-radius: 50px;
   margin-top: 20px;
-  text-align: center;
 }
 
 .hire-me-btn:hover {
@@ -135,7 +118,6 @@ p {
 }
 
 .profile-picture-container {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,47 +130,25 @@ p {
   border-radius: 10px;
 }
 
-.footer {
-  padding: 20px;
-  background-color: #fff;
-  text-align: center;
-  margin-top: auto;
-}
-
 .hire-link {
-  list-style: none;
-}
-
-.hire-link a {
   text-decoration: none;
   color: #fff;
   font-size: 16px;
 }
 
-.hire-link a:hover {
+.hire-link:hover {
   color: #fff;
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 1400px) {
-  .main-content {
-    padding: 40px 5%;
-  }
-}
-
 @media (max-width: 1024px) {
-  .main-content {
-    flex-direction: column;
-    padding: 20px 5%;
-  }
-
-  .intro, .profile-picture-container {
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-
   .names {
     font-size: 32px;
+  }
+
+  .contentt {
+    margin-left: 0;
+    text-align: center;
   }
 }
 
