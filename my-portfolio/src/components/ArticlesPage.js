@@ -173,7 +173,7 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import styles from './Articles.module.css';
 
-const BASE_URL = 'http://127.0.0.1:8000/api/api/'; // Base URL for Django server
+const BASE_URL = process.env.REACT_APP_BASE_URL; // Base URL for Django server
 
 const ArticlesPage = () => {
   const [selectedCategory, setSelectedCategory] = useState(0); // Use ID 0 for "All Categories"
@@ -181,7 +181,7 @@ const ArticlesPage = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    axios.get('https://nolimit-djangojacksonandalice.fjyxll.easypanel.host/api/api/categories/')
+    axios.get(`${BASE_URL}/api/api/categories/`)
       .then(response => {
         setCategories([{ id: 0, name: 'All Categories' }, ...response.data]);
       })
@@ -189,7 +189,7 @@ const ArticlesPage = () => {
         console.error('Error fetching categories:', error);
       });
 
-    axios.get('https://nolimit-djangojacksonandalice.fjyxll.easypanel.host/api/api/blogposts/')
+    axios.get(`${BASE_URL}/api/api/blogposts/`)
       .then(response => {
         setArticles(response.data);
       })

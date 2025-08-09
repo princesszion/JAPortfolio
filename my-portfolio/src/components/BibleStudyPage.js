@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import styles from './BibleStudy.module.css';
-import bibleImage from '../assets/images/bible.jpg'; // Replace with the actual path to your image
+import bibleImage from '../assets/images/bible.jpg';
 
-const BASE_URL = '"http://212.129.37.106:8081/';
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 const BibleStudyPage = () => {
   const [formData, setFormData] = useState({
@@ -11,7 +11,7 @@ const BibleStudyPage = () => {
     last_name: '',
     location: '',
     email: '',
-    phone: '' // Change this to 'phone' to match the backend
+    phone: ''
   });
 
   const [feedback, setFeedback] = useState('');
@@ -25,15 +25,15 @@ const BibleStudyPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('https://nolimit-djangojacksonandalice.fjyxll.easypanel.host/api/api/submit-bible-study-form/', formData)
-      .then(response => {
+    axios.post(`${BASE_URL}/api/api/submit-bible-study-form/`, formData)
+      .then(() => {
         setFeedback('Thank you for signing up! You will receive the joining links soon.');
         setFormData({
           first_name: '',
           last_name: '',
           location: '',
           email: '',
-          phone: '' // Reset the 'phone' field as well
+          phone: ''
         });
       })
       .catch(error => {

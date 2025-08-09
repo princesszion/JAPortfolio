@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import styles from './ArticleDetails.module.css';
 
-const BASE_URL = 'https://nolimit-djangojacksonandalice.fjyxll.easypanel.host';
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 const ArticleDetails = () => {
   const { id } = useParams();

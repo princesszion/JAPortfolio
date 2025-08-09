@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styles from './CreateArticle.module.css';
 
-const BASE_URL = 'http://127.0.0.1:8000'; // Base URL for Django server
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 const CreateArticlePage = () => {
   const [formData, setFormData] = useState({

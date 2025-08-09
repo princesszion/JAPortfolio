@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import styles from './Contact.module.css';
 
-const BASE_URL = '"http://212.129.37.106:8081'; // Base URL for Django server
+
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -33,7 +34,7 @@ const ContactPage = () => {
       subject: formData.subject,
       message: formData.message
     };
-    axios.post('https://nolimit-djangojacksonandalice.fjyxll.easypanel.host/api/api/submit-contact-form/', dataToSend, {
+    axios.post(`${BASE_URL}/api/api/submit-contact-form/`, dataToSend, {
       headers: {
         'Content-Type': 'application/json'
       }

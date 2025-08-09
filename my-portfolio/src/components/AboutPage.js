@@ -5,16 +5,21 @@ import image2 from '../assets/images/Alice.png';
 
 const AboutPage = () => {
   const [showMoreInfo, setShowMoreInfo] = useState(false);
+  const [showMoreInfoAlice, setShowMoreInfoAlice] = useState(false);
 
   const handleMoreInfoClick = () => {
     setShowMoreInfo(!showMoreInfo);
+  };
+
+  const handleMoreInfoClickAlice = () => {
+    setShowMoreInfoAlice(!showMoreInfoAlice);
   };
 
   return (
     <div className={styles.aboutPage}>
       <div className={styles.mainContent}>
         <div className={styles.profilePictureContainer}>
-          <img className={styles.profilePicture} src={image1} alt="Kenedy Jackson" />
+          <img className={styles.profilePicture} src={image1} alt="Jackson" />
         </div>
         <div className={styles.aboutText1}>
           <h1>Meet Jackson</h1>
@@ -45,24 +50,35 @@ const AboutPage = () => {
       </div>
       <div className={styles.mainContent}>
         <div className={styles.aboutText}>
-          <h1>Meet Alice</h1>
-          <div className={styles.headingLine}></div>
-          <p>I am:</p>
-          <ul>
-            <li>A believer in the God of the Bible</li>
-            <li>A lover of God’s Word: I love how God speaks to me, everything I am and have has come to me through the Word.</li>
-            <li>I love how the Holy spirit inspires me without any drama. He talks to me like a friend talks to his friend. He causes me to know deep things that no man taught me. He is my teacher.</li>
-            <li>A social worker and youth educator: find out more about my work with <a href="https://wit21hub.com/">Wit21-Hub</a> and on <a href="https://www.linkedin.com/in/alice-apejoye/">LinkedIn</a></li>
-            <li>A wife to God’s Prince: With my darling Jackie, I have enjoyed a slice of heaven here on earth.</li>
-          </ul>
-          <div className={styles.buttons}>
-            <button className={styles.moreInfoBtn} onClick={handleMoreInfoClick}>
-              {showMoreInfo ? 'Show Less' : 'More Info'}
-            </button>
-          </div>
-        </div>
+  <h1>Meet Alice</h1>
+  <div className={styles.headingLine}></div>
+  <p>I am:</p>
+  <ul>
+    <li>A believer in the God of the Bible</li>
+    <li>A lover of God’s Word: I love how God speaks to me, everything I am and have has come to me through the Word.</li>
+    <li>I love how the Holy spirit inspires me without any drama. He talks to me like a friend talks to his friend. He causes me to know deep things that no man taught me. He is my teacher.</li>
+    <li>A social worker and youth educator: find out more about my work with <a href="https://wit21hub.com/">Wit21-Hub</a> and on <a href="https://www.linkedin.com/in/alice-apejoye/">LinkedIn</a></li>
+    <li>A wife to God’s Prince: With my darling Jackie, I have enjoyed a slice of heaven here on earth.</li>
+  </ul>
+
+  {showMoreInfoAlice && (
+    <div className={styles.moreInfo}>
+      <ul>
+        <li>A learner for life constantly growing in God, family, and purpose.</li>
+        <li>A joyful soul,radiating peace, empathy, and the love of Christ to all I meet.</li>
+      </ul>
+    </div>
+  )}
+
+  <div className={styles.buttons}>
+    <button className={styles.moreInfoBtn} onClick={handleMoreInfoClickAlice}>
+      {showMoreInfoAlice ? 'Show Less' : 'More Info'}
+    </button>
+  </div>
+</div>
+
         <div className={styles.profilePictureContainer2}>
-          <img className={styles.profilePicture} src={image2} alt="Kenedy Jackson" />
+          <img className={styles.profilePicture} src={image2} alt=" Jackson" />
         </div>
       </div>
     </div>
